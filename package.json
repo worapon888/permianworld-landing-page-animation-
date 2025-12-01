@@ -1,16 +1,31 @@
 {
-  "name": "codegrid-permianworld-landing-page-animation",
+  "name": "permianworld-landing-page-animation",
   "version": "1.0.0",
+  "description": "Landing page animation built with GSAP and Vite.",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "postinstall": "node -e \"if (process.platform!=='win32'){require('child_process').execSync('chmod +x node_modules/.bin/*',{stdio:'inherit'})}\"",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "host": "vite --host"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vite",
+    "gsap",
+    "landing-page",
+    "animation",
+    "codegrid"
+  ],
+  "author": "Worapon Jintajirakul",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "gsap": "^3.13.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
     "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
   }
 }
